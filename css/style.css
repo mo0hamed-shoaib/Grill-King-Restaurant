@@ -1,0 +1,244 @@
+/* Import font */
+@font-face {
+    src: url(/assets/fonts/Changa/Changa-VariableFont_wght.ttf);
+    font-family: "Changa";
+}
+
+/* Base styles */
+body {
+    font-family: "Changa", Arial, Helvetica, sans-serif;
+    padding-top: 100px;
+    background-color: #f8f9fa;
+}
+
+/* Card styles */
+.card-hover {
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white;
+    border-radius: 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem !important;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.5rem;
+}
+
+.card-img-top {
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px 12px 0 0;
+}
+
+.container {
+    max-width: 1400px;
+    padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+        min-height: 2.5rem;
+    }
+    
+    .card-text {
+        font-size: 0.9rem;
+        min-height: 4rem;
+    }
+
+    .card-img-top {
+        aspect-ratio: 4/5;
+    }
+
+    .card-hover {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+        min-height: 2.25rem;
+    }
+    
+    .card-text {
+        font-size: 0.85rem;
+        min-height: 3.5rem;
+    }
+
+    .card-img-top {
+        aspect-ratio: 4/5;
+    }
+
+    .card-hover {
+        max-width: 85%;
+        margin: 0 auto;
+    }
+}
+
+/* Navbar styles */
+.navbar {
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-brand img {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+.navbar-nav {
+    gap: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    right: 0;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #000;
+}
+
+.navbar-nav .dropdown-menu {
+    font-size: 1.1rem;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+}
+
+.navbar-nav .dropdown-item {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdown-menu {
+    text-align: right;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.footer h5 {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.footer p {
+    color: #b3b3b3;
+}
+
+.footer .bi {
+    color: #e8681e;
+}
+
+.footer .badge {
+    background-color: #333 !important;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.footer .badge:hover {
+    background-color: #ff3300 !important;
+    color: #1a1a1a;
+}
+
+.footer a {
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ff3300;
+}
+
+.about-section {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
